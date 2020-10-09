@@ -1,40 +1,28 @@
-#### #### #### #### #### #### #### ####
-#### Directory
-#### #### #### #### #### #### #### ####
 rm(list=ls())
 set.seed(100)
-Nthreads = 2
-DoClust = T
+
+#### #### #### #### #### #### #### ####
+#### PARAMETERS TO SET
+#### #### #### #### #### #### #### ####
+
+NAME  = "ModelOut" # name of the output files
+DIR   = "/Users/gianlucamastrantonio/Dropbox (Politecnico di Torino Staff)/lavori/ode/mattia-amir-gianluca-enrico/Submit/Dirichlet_Process_Mixture_Model_For_RNA_data/" # directory where the github repository is downloaded
+
+Nthreads = 2 # number of cores to be used for the computation
+DoClust = T # T if a misture model is used
 
 
-NAME  = "ModelOut"
-DIR   = "/Users/gianlucamastrantonio/Dropbox (Politecnico di Torino Staff)/lavori/ode/mattia-amir-gianluca-enrico/Submit/Dirichlet_Process_Mixture_Model_For_RNA_data/"
-
-
-DirOUT = paste(DIR,"/out/",sep="")
 #### #### #### #### #### #### #### ####
 #### Libraries
 #### #### #### #### #### #### #### ####
 
 library(OdePackRT1)
 
-# library(BH)
-# library(coda)
-# library(MCMCpack)
-# library(odeintr)
-# library(Rcpp)
-# library(deSolve)
-# library(sp)
-# library(akima)
-# library(evd)
-# library(truncdist)
-#
-# library(label.switching)
-
 #### #### #### #### #### #### #### ####
 #### Data
 #### #### #### #### #### #### #### ####
 Kmax = 150
+DirOUT = paste(DIR,"/out/",sep="")
 # allGenesData = readRDS(paste(DIRdata,"filteredRpkms.rds",sep=""))
 # funckvalue   = readRDS(paste(DIRdata,"filteredRates.rds",sep=""))
 # The data we want to model
